@@ -3,6 +3,11 @@
 var helpers = require("../../helpers/helpers");
 
 exports["America/Detroit"] = {
+
+	"guess:by:offset" : helpers.makeTestGuess("America/Detroit", { offset: true, expect: "America/New_York" }),
+
+	"guess:by:abbr" : helpers.makeTestGuess("America/Detroit", { abbr: true, expect: "America/New_York" }),
+
 	"1905" : helpers.makeTestYear("America/Detroit", [
 		["1905-01-01T05:32:10+00:00", "23:59:59", "LMT", 19931 / 60],
 		["1905-01-01T05:32:11+00:00", "23:32:11", "CST", 360]
@@ -30,13 +35,6 @@ exports["America/Detroit"] = {
 		["1948-04-25T07:00:00+00:00", "03:00:00", "EDT", 240],
 		["1948-09-26T05:59:59+00:00", "01:59:59", "EDT", 240],
 		["1948-09-26T06:00:00+00:00", "01:00:00", "EST", 300]
-	]),
-
-	"1967" : helpers.makeTestYear("America/Detroit", [
-		["1967-06-14T06:59:59+00:00", "01:59:59", "EST", 300],
-		["1967-06-14T07:00:00+00:00", "03:00:00", "EDT", 240],
-		["1967-10-29T05:59:59+00:00", "01:59:59", "EDT", 240],
-		["1967-10-29T06:00:00+00:00", "01:00:00", "EST", 300]
 	]),
 
 	"1973" : helpers.makeTestYear("America/Detroit", [

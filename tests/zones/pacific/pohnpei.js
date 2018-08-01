@@ -3,7 +3,10 @@
 var helpers = require("../../helpers/helpers");
 
 exports["Pacific/Pohnpei"] = {
-	"guess" : helpers.makeTestGuess("Pacific/Pohnpei", { offset: false, abbr: true }),
+
+	"guess:by:offset" : helpers.makeTestGuess("Pacific/Pohnpei", { offset: true, expect: "Pacific/Norfolk" }),
+
+	"guess:by:abbr" : helpers.makeTestGuess("Pacific/Pohnpei", { abbr: true, expect: "Pacific/Norfolk" }),
 
 
 };
